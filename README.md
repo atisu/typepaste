@@ -2,6 +2,8 @@
 
 Pastes clipboard data to the current active window by emulating actual keypresses (using PyAutoGUI).
 
+Assumes US Keyboard layout.
+
 ## Requirements ##
 - Python 3
 - pip
@@ -18,7 +20,7 @@ Pastes clipboard data to the current active window by emulating actual keypresse
     . venv/bin/activate
     pip install -r requirements.txt
     ```
-3. Edit `typepaste.applescript` and set location where the main folder is found:
+3. Edit `typepaste.applescript` and set `LOCATION` to where the main folder is found:
     ```
     do shell script "/bin/bash -s <<'EOF'
         LOCATION=~/Projects/typepaste/
