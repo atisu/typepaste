@@ -12,7 +12,7 @@ Assumes US Keyboard layout.
 ## Installation ##
 
 0. Clone the repository.
-1. Create a virutalenv in the `venv` folder:
+1. Create a virutalenv named `venv` in the folder:
     ```
     virtualenv venv
     ```
