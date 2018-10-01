@@ -11,6 +11,7 @@ Assumes US Keyboard layout.
 
 ## Installation ##
 
+0. Clone the repository.
 1. Install virtualenv and create a virutalenv in the `venv` folder:
     ```
     virtualenv venv
