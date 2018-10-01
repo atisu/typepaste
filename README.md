@@ -21,7 +21,7 @@ Assumes US Keyboard layout.
     . venv/bin/activate
     pip install -r requirements.txt
     ```
-3. Edit `typepaste.applescript` and set `LOCATION` to where the main folder is found:
+3. Edit `typepaste.applescript` and set `LOCATION` to where the TypePaste repo was checked out:
     ```
     do shell script "/bin/bash -s <<'EOF'
         LOCATION=~/Projects/typepaste/
