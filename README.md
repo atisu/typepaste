@@ -1,6 +1,6 @@
 # TypePaste #
 
-Pastes clipboard data to the current active window by emulating actual keypresses (using PyAutoGUI).
+Pastes clipboard data into the current active window by emulating actual keypresses (using PyAutoGUI).
 
 Assumes US Keyboard layout.
 
