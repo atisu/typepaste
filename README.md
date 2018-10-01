@@ -2,6 +2,8 @@
 
 Pastes clipboard data to the current active window by emulating actual keypresses (using PyAutoGUI).
 
+Assumes US Keyboard layout.
+
 ## Requirements ##
 - Python 3
 - pip
