@@ -29,9 +29,9 @@ Assumes US Keyboard layout.
     EOF"
     ```
 
-    You can also increase the number of characters printed once via adjusting `--batch-size 10`.
+    You can also increase the number of characters printed at once via adjusting `--batch-size 10`.
 
 4. Open `typepaste.applescript` in Mac OS Script Editor and in `Preferences` tick `Show script menu in menu bar`.
-5. In Menu bar click `Open Scripts Folder` -> `Open User Scripts Folder` and copy `typepaste.applescript` here.
+5. In Menu bar click `Open Scripts Folder` -> `Open User Scripts Folder` and copy `typepaste.applescript` there.
 
 You can run TypePaste from the menu bar.
