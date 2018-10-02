@@ -24,7 +24,7 @@ if __name__ == "__main__":
     text = ""
     for i in clipboard_text:
         text += i
-        if len(text) == 10:
+        if len(text) == batch_size:
             pyautogui.typewrite(text)
             text = ""
     if text:
