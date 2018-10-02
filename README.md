@@ -43,7 +43,7 @@ You can run TypePaste from the menu bar.
 
 1. Copy file contents to clipboard.
 2. Use the `typepaste-base32.applescript` or if you are a bit more paranoid the `typepaste-base32-lowercase.applescript` script to paste the data as base32 encoded string.
-3. Use the provided `base32d.py` or any base32 decoder to decode the contents. Make sure all characters are uppercase and remove white space.
+3. Use the provided `base32d.py` or any other base32 decoder to decode the contents. For other decoders make sure all characters are uppercase and remove white space.
 
 ### Copy multiple files ###
 
