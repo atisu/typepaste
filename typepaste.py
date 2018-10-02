@@ -18,8 +18,9 @@ if __name__ == "__main__":
     try:
         batch_size = int(args.batch_size)
     except ValueError:
-        sys.exit("Batch size (-B or --batch-size) should be an integer "
-                 "at least 1.")
+        sys.exit("Batch size should be an integer. ")
+    if batch_size < 1:
+        sys.exit("Batch size should be at least 1. ")
     clipboard_text = clipboard.paste()
     text = ""
     for i in clipboard_text:
