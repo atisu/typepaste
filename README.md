@@ -56,9 +56,9 @@ You can run TypePaste from the menu bar.
 7. Base32 decode the resulting file (e.g., with the provided `base32d.py`).
 8. Extract the archive.
 
-### Troubleshooting ###
+## Troubleshooting ##
 
-#### Check target content for invalid characters ####
+1. Check target content for invalid characters:
 
 ```
 cat files.tar.gz.b32| sed 's/[0-9A-Z=]//g'
