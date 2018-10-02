@@ -12,7 +12,7 @@ if __name__ == "__main__":
     parser.add_argument('-B', '--batch-size', metavar='batch_size',
                         help="print number of characters at once (batch)")
     args = parser.parse_args()
-    batch_size = 0
+    batch_size = 1
     if not args.batch_size:
         sys.exit("ERROR: Batch size (-B or --batch-size) missing.")
     try:
