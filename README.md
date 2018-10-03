@@ -6,7 +6,7 @@ Assumes US Keyboard layout.
 
 ## Requirements ##
 - Python 3 (for typepaste.py, base32e.py)
-- Python 2 (for base32d.py -- target environment assumed to have older Python)
+- Python 2 (for base32lcd.py -- target environment assumed to have older Python)
 - pip
 - virtualenv
 
@@ -43,7 +43,7 @@ You can run TypePaste from the menu bar.
 
 1. Copy file contents to clipboard.
 2. Use the `typepaste-base32.applescript` or if you are a bit more paranoid the `typepaste-base32-lowercase.applescript` script to paste the data as base32 encoded string.
-3. Use the provided `base32d.py` or any other base32 decoder to decode the contents. For other decoders make sure all characters are uppercase and remove white space.
+3. Use the provided `base32lcd.py` or any other base32 decoder to decode the contents. For other decoders make sure all characters are uppercase and remove white space.
 
 ### Copy multiple files ###
 
@@ -53,7 +53,7 @@ You can run TypePaste from the menu bar.
 4. Copy contents to clipboard, e.g., `cat xaa | pbcopy`.
 5. Use `typepaste.applescript` to copy to the end of an open file at the destination.
 6. Repeat for all parts (e.g., `xaa`, `xab`, `xac`,...).
-7. Base32 decode the resulting file (e.g., with the provided `base32d.py`).
+7. Base32 decode the resulting file (e.g., with the provided `base32lcd.py`).
 8. Extract the archive.
 
 ## Troubleshooting ##
@@ -61,5 +61,5 @@ You can run TypePaste from the menu bar.
 1. Check target content for invalid characters:
 
 ```
-cat files.tar.gz.b32| sed 's/[0-9A-Z=]//g'
+cat files.tar.gz.b32 | sed 's/[0-9A-Z=]//g'
 ```
