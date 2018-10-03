@@ -8,4 +8,4 @@ if __name__ == "__main__":
     text = ""
     for line in fileinput.input():
         text += line
-print(base64.b32decode(text.upper().strip()), end='')
+print(base64.b32decode(text.upper().strip()).decode('ascii'), end='')
