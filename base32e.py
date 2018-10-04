@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-from __future__ import print_function
-import fileinput
+import sys
 import base64
 import argparse
 
@@ -12,10 +11,8 @@ if __name__ == "__main__":
                         action='store_true')
     args = parser.parse_args()
 
-    text = ""
-    for line in fileinput.input(files='-'):
-        text += line
-    encoded_text = base64.b32encode(text.encode('utf-8')).decode('utf-8')
+    text = sys.stdin.buffer.read()
+    encoded_text = base64.b32encode(text)
     if args.lowercase:
         encoded_text = encoded_text.lower()
-    print(encoded_text, end='')
+    print(encoded_text.decode('utf-8'), end='')
