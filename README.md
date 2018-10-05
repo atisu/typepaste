@@ -60,6 +60,14 @@ You can run TypePaste from the menu bar.
 
 1. Check target content for invalid characters:
 
-```
-cat files.tar.gz.b32 | sed 's/[0-9A-Z=]//g'
-```
+   ```
+   cat files.tar.gz.b32 | sed 's/[0-9A-Z=]//g'
+   ```
+
+   or if the file was created with lowercased data:
+   
+   ```
+   cat files.tar.gz.b32 | sed 's/[0-9a-z=]//g'
+   ```
+   
+   
