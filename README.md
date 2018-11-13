@@ -29,7 +29,7 @@ Assumes US Keyboard layout.
         . ${LOCATION}/venv/bin/activate && ${LOCATION}/typepaste.py --batch-size 10
     EOF"
     ```
-    Repeat for `typepaste-base32.applescript`, `typepaste-base32-lowercase.applescript`.
+    Repeat for `*.applescript`.
     You can also increase the number of characters printed at once via adjusting `--batch-size 10`.
 
 4. Open `typepaste.applescript` in Mac OS Script Editor and in `Preferences` tick `Show script menu in menu bar`.
