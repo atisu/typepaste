@@ -20,25 +20,34 @@ if __name__ == "__main__":
     parser.add_argument('-l', '--lowercase',
                         help="print lowecased text",
                         action='store_true')
+    parser.add_argument('-f', '--source-file', metavar='source_file',
+                        help="Use source file instead of clipboard. "
+                        "Assumes binary file.")
     args = parser.parse_args()
     batch_size = 1
+    paste_text = ""
     try:
         batch_size = int(args.batch_size)
     except ValueError:
         sys.exit("Batch size should be an integer. ")
     if batch_size < 1:
         sys.exit("Batch size should be at least 1. ")
-    clipboard_text = clipboard.paste()
+    if (args.source_file):
+        with open(args.source_file, "rb") as f:
+            paste_text = f.read()
+    else:
+        paste_text = clipboard.paste().encode('utf-8')
     if args.base32_encode:
-        clipboard_text = base64.b32encode(
-            clipboard_text.encode('utf-8')).decode('utf-8')
+        paste_text = base64.b32encode(paste_text)
     if args.lowercase:
-        clipboard_text = clipboard_text.lower()
+        paste_text = paste_text.lower()
     text = ""
-    for i in clipboard_text:
-        text += (i)
+    pyautogui.FAILSAFE = True
+    for i in paste_text:
+        text += chr(i)
         if len(text) == batch_size:
-            pyautogui.typewrite(text)
+            pyautogui.typewrite(text, interval=0.0)
             text = ""
     if text:
-        pyautogui.typewrite(text)
+        print(text, end='')
+        pyautogui.typewrite(text, interval=0.0)
